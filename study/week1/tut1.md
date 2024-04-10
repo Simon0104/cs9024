@@ -113,3 +113,53 @@ int main(){
     }
     return 0;
 }
+
+
+
+(Stack ADO)
+Modify the Stack ADO from the lecture (Stack.h and Stack.c) to an implementation of a stack of integers. Below is the header file (IntStack.h) for your ADO:
+
+IntStack.h
+// Integer Stack ADO header file ... COMP9024 24T1
+
+#define MAXITEMS 10
+
+void StackInit();     // set up empty stack
+int  StackIsEmpty();  // check whether stack is empty
+void StackPush(int);  // insert int on top of stack
+int  StackPop();      // remove int from top of stack
+Your task is to implement these functions in a program called IntStack.c.
+
+Complete the test program below (StackTester.c) and run it to test your integer stack ADO. The tester
+
+initialises the stack
+prompts the user to input a number n
+checks that n is a positive number
+prompts the user to input n numbers and push each number onto the stack
+uses the stack to output the n numbers in reverse order (needs to be implemented)
+StackTester.c
+// Integer Stack ADO tester ... COMP9024 24T1
+#include <stdio.h>
+#include <stdlib.h>
+#include "IntStack.h"
+
+int main(void) {
+   int i, n;
+   char str[BUFSIZ];
+
+   StackInit();
+
+   printf("Enter a positive number: ");
+   scanf("%s", str);
+   if ((n = atoi(str)) > 0) {    // convert to int and test if positive
+      for (i = 0; i < n; i++) {
+	 printf("Enter a number: ");
+	 scanf("%s", str);
+	 StackPush(atoi(str));
+      }
+   }
+
+   /* NEEDS TO BE COMPLETED */
+
+   return 0;
+}
