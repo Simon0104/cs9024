@@ -85,3 +85,31 @@ Fib(1) = 1
 Fib(2) = 1
 Fib(n) = Fib(n-1)+Fib(n-2) for n≥3
 Write a C program fibonacci.c that applies the process described in Part a. to the first 10 Fibonacci numbers.
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 10
+
+void fibor(int n){
+   printf("%d\n", n);
+   while (n != 1) {
+      if (n % 2 == 0) {
+	 n = n / 2;
+      } else {
+	 n = 3*n + 1;
+      }
+      printf("%d\n", n);
+   }
+}
+
+int main(){
+    int fib[MAX] = {1,1};
+    for(int i = 2; i < MAX; i++){
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+    for(int i = 0; i < MAX; i++){
+        printf("fib(%d) = %d\n",i+1,fib[i]);
+        fibor(fib[i]);
+    }
+    return 0;
+}
