@@ -77,11 +77,6 @@ for(i = 0;i < m;i++)
     matric[i] = malloc*(n*sizeof(float));
     assert(matric[i] != NULL); 
 
-在 for 循环中，你使用了变量 b，但是没有定义它。你可能想使用的是 n，因为 n 是用户输入的正整数，用于指定二维数组的行数。
-
-在 printf 函数调用后面有一个 return 0; 语句，这会导致 printf 后面的代码不会被执行。你需要将 printf 和 free 放在 return 0; 语句之前。
-
-free(); 这行代码是错误的，因为 free 函数需要指定要释放的内存块。你需要释放每个指针指向的内存块，然后释放 matrix 数组本身的内存块。
 // Exercise #7: Dynamic Arrays	
 // Write a C-program that
 // prompts the user to input a positive number n
