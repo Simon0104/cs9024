@@ -1,3 +1,56 @@
+// (Counting primitive operations)
+// The following algorithm
+
+// takes a sorted array A[1..n] of characters
+// and outputs, in reverse order, all 2-letter words νω such that ν≤ω.
+
+// for all i=n down to 1 do
+
+// for(int i = n;i = 1;i--)
+// 该for loop运行次数应该分为两大部分：
+// 1.判断i是否等于1，此处应运行n+1次
+// 2.每次循环应该执行一次--操作，此处应运行n次
+// 综上所述应该运行2n+1次
+
+//       for all j=n down to i do
+
+// for(int j = n;j = i;j--)
+/
+
+//           print "A[i]A[j]"
+
+// 因为要找二维数组，所以运行次数应该是n^2
+
+//       end for
+//   end for
+
+// Count the number of primitive operations (evaluating an expression, indexing into an array). 
+// What is the time complexity of this algorithm in big-Oh notation?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // (Ordered linked lists)
 // A particularly useful kind of linked list is one that is sorted. 
 // Give an algorithm for inserting an element at the right place into a linked list whose elements are sorted in ascending order.
