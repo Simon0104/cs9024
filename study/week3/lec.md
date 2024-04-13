@@ -87,7 +87,7 @@ for(i = 0;i < m;i++)
 
 ////////////////////////////////////////////////////////////////////////////
 
-// Exercise #7: Dynamic Arrays	68/98
+// Exercise #7: Dynamic Arrays	
 // Write a C-program that
 
 // prompts the user to input a positive number n
